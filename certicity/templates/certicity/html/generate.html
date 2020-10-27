@@ -1,0 +1,62 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate</title>
+    <link rel="stylesheet" href="{%static '/css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="nav">
+            <img src="/static/img/logo.png" alt="" class="nav__logo">
+            <ul class="nav__ul">
+                <li>
+                    <a href="certicity\html\dashboard.html" class="nav__d">Dashboard</a>
+                    <a href="certicity\html\generate.html" class="nav__g">Generate</a>
+                </li>
+            </ul>
+
+            <img src="/static/img/add-user.png" class="nav__user">
+        </section>
+
+        <section class="upload">
+            <div class="upload__container">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <form action="generate/" method="GET" class="cert__form">
+                            <input name="noc" class="cert__input" type="text" id="fname" placeholder="Certificate Of...."><br>
+                            <input class="cert__input" type="text" id="lname" placeholder="Presented By"><br>
+ 
+                            <input type="checkbox" name="c1" id="c1" class="cert__form-check">
+                            <label for="c1">Send Certificates To Recipients By Mail</label>
+                            <input input type="file" accept="image/*" id="imgFile" class="cert__form-logo" />
+                            <label for="imgFile" class="imgf">Upload Company Logo</label>
+                            <input type="file"
+                                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                                id="excelFile" />
+                            <label for="excelFile" class="excelf">Upload Excel Sheet</label>
+                            <button class="Generate">Generate Certificate</button>
+                        </form>
+
+                        
+                    </div>
+                    <div class="col-1-of-2">
+                        <input id="imgFile" type="file" accept="image/*" />
+                        <label for="imgFile" class="tempf">Choose Template</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+<!-- <script src="{%static '/js/main.js'%}"></script> -->
+<script src="/static/js/main.js"></script>
+</html>
